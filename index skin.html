@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skin Disease Detection</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('data:image/jpeg;base64,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') no-repeat center center/cover;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn.signup {
+      background: #28a745;
+      color: white;
+    }
+
+    .btn.login {
+      background: #007bff;
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>Welcome to Skin Disease Detection and Consultation System</h1>
+    <div class="buttons">
+      <button class="btn signup">Sign Up</button>
+      <button class="btn login">Log In</button>
+    </div>
+  </div>
+</body>
+
+</html>
